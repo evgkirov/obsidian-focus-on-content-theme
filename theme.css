@@ -1,4 +1,69 @@
 body {
+	--divider-color: transparent;
+	--ribbon-background: transparent;
+	--header-height: 47px;
+	--tab-container-background: transparent;
+	--text-faint: rgb(from var(--text-normal) r g b / 50%);
+	--text-muted: rgb(from var(--text-normal) r g b / 70%);
+	--titlebar-background-focused: transparent;
+	--tab-curve: 0;
+	--tab-radius-active: var(--radius-m);
+}
+
+.workspace {
+	background-color: var(--background-secondary);
+	/* background-color: skyblue; */
+}
+
+.workspace-split.mod-root {
+	background: transparent;
+}
+
+.workspace-tab-header-container,
+.workspace-ribbon,
+.nav-buttons-container,
+.workspace-tab-header-new-tab,
+.workspace-tab-header-tab-list {
+	opacity: 0;
+	transition: opacity 200ms;
+}
+
+.workspace-tab-header-container:hover,
+.workspace-ribbon:hover,
+.nav-buttons-container:hover,
+.workspace-tab-header-new-tab:hover,
+.workspace-tab-header-tab-list:hover {
+	opacity: 1;
+}
+
+.workspace-split.mod-root .workspace-tab-header-container {
+	opacity: 1;
+}
+
+.workspace-leaf {
+	background: transparent;
+	opacity: 0.5;
+	transition: opacity 200ms;
+}
+
+.workspace-leaf:hover,
+.workspace-leaf:has(.markdown-source-view) {
+	opacity: 1;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+	padding-bottom: 7px;
+}
+
+.workspace-fake-target-overlay:not(.is-in-sidebar)
+	.workspace-tabs
+	.workspace-leaf,
+.mod-root .workspace-tabs .workspace-leaf {
+	border-top-left-radius: var(--radius-xl);
+	border-top-right-radius: var(--radius-xl);
+}
+
+/* body {
 	--radius-s: 0px;
 	--radius-m: 0px;
 	--radius-l: 0px;
@@ -31,4 +96,4 @@ svg * {
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
-}
+} */

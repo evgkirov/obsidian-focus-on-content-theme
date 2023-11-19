@@ -1,7 +1,7 @@
 {
-	"name": "Sample Theme",
-	"version": "1.0.0",
+	"name": "Focus on Content",
+	"version": "0.0.0",
 	"minAppVersion": "1.0.0",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md"
+	"author": "Evgeniy Kirov",
+	"authorUrl": "https://github.com/evgkirov/obsidian-focus-on-content-theme"
 }
